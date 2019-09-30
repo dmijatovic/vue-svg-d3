@@ -1,0 +1,29 @@
+{
+  "extends": ["eslint:recommended", "plugin:vue/recommended"],
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none"
+      }
+    ],
+    "no-debugger": "warn",
+    "no-console": 1,
+    "no-unexpected-multiline": "warn"
+  }
+}
