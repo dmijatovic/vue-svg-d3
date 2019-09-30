@@ -7,9 +7,9 @@ const store = new Vuex.Store({
   state: {
     home: {
       bubbles: [
-        { cx: 10, cy: 15, r: 20, fill: "red" },
-        { cx: 30, cy: 35, r: 3, fill: "green" },
-        { cx: 40, cy: 45, r: 40, fill: "blue" }
+        { cx: 100, cy: 200, r: 20, fill: "red" },
+        { cx: 230, cy: 200, r: 30, fill: "green" },
+        { cx: 340, cy: 200, r: 40, fill: "blue" }
       ]
     }
   },
