@@ -9,14 +9,14 @@
 import MenuButton from '@/components/primitives/MenuButton'
 export default {
   name: 'Header',
+  components: {
+    MenuButton,
+  },
   props: {
     showMenuBtn: {
       type: Boolean,
       default: true,
     },
-  },
-  components: {
-    MenuButton,
   },
   methods: {
     showMenu() {

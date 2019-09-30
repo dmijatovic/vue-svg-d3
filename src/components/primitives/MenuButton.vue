@@ -35,7 +35,7 @@ export default {
   name: 'MenuButton',
   methods: {
     showMenu() {
-      console.log('MenuButton...emit...')
+      //console.log('MenuButton...emit...')
       this.$emit('showMenu', true)
     },
   },

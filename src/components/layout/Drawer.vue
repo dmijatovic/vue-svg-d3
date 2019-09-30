@@ -1,7 +1,7 @@
 <template>
-  <section class="drawer" v-if="visible">
+  <section v-if="visible" class="drawer">
     <div class="drawer-header">
-      <h1>{{title}}</h1>
+      <h1>{{ title }}</h1>
       <CloseButton @closeMe="hideMe" />
     </div>
     <nav>
@@ -14,7 +14,7 @@
           class="menu-item"
           active-class="active"
           exact
-        >{{item.label}}</router-link>
+        >{{ item.label }}</router-link>
       </ul>
     </nav>
   </section>
