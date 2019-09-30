@@ -15,7 +15,17 @@ const store = new Vuex.Store({
   },
   getters: {
     getBubbleData(state) {
-      return state.home.bubles;
+      console.log("getBubbleData...state...", state)
+      return state.home.bubbles;
+    }
+  },
+  mutations:{
+    updateBubbleRadius(state, action){
+      console.log("updateBubbleRadius...", action)
+      const {pos,val} = action.payload
+      if (state.home.bubbles[pos]){
+        state.home.bubbles[pos]['r']=val
+      }
     }
   }
 });
