@@ -1,0 +1,10 @@
+:root {
+  --color-black: #171717;
+  --color-dark-green: #586f7c;
+  --color-light-green: #b8dbd9;
+  --color-dark-grey: #2f4550;
+  --color-light-grey: #f4f4f9;
+  --color-orange: #e76f51;
+  --color-yellow: #e7c26a;
+  --box-shadow-1: 0 8 16 rgba(0, 0, 0, 0.25);
+}
