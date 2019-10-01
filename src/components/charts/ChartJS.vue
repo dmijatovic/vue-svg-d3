@@ -22,6 +22,10 @@ export default {
     //debugger
     this.chartRef = new Chart(this.$refs.canvas, this.config)
   },
+  beforeDestroy() {
+    //remove chart from Chart.js collection
+    this.chartRef.destroy()
+  },
 }
 </script>
 

@@ -26,3 +26,12 @@ export const chartjsText = {
     RESIZING DOES NOT WORK WHEN RETRACTING.
   `
 };
+
+export const highchartsText = {
+  title: "Highcharts example 1",
+  message: `
+    Example of Highcharts chart in Vue component. The component expects
+    configuration object with all options including data.
+  `
+};
+

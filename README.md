@@ -8,4 +8,6 @@ This project is setup on condesandbox and than saved to github. I believe that v
 
 ## Lessons learned
 
-- Lazy loading: I needed to add babel plugin for this
+- Lazy loading: I needed to add babel plugin and extend babelrc.
+- Chart.js: I added ChartJS component to take configuration object with all info.The ChartJS lib is used to created chart on component mounting. NOTE: resizing the chart only works when explaning the window. When rectracting the window the chart does not resize. Futher investigation is required.
+- Highcharts:
