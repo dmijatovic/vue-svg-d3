@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     toggleDrawer(visible) {
-      console.log('toggleMenu....', visible)
+      //console.log('toggleMenu....', visible)
       this.showDrawer = !this.showDrawer
     },
   },

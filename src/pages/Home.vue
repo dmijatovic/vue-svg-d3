@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     updateCircle(pos, val) {
-      console.log(`Update bubble ${pos} to ${val}`)
+      //console.log(`Update bubble ${pos} to ${val}`)
       this.$store.commit({
         type: 'updateCircleRadius',
         payload: {
@@ -59,11 +59,9 @@ export default {
       })
     },
   },
-  // beforeMount() {
-  //   console.log('beforeMounted...', this.getBubbleData)
-  // },
+
   mounted() {
-    console.log('Home...mounted')
+    //console.log('Home...mounted')
     if (this.getCircleData.length === 0) {
       console.log('No circles')
       this.$store.commit({
@@ -77,7 +75,6 @@ export default {
         ],
       })
     }
-    //this.sliders = [...this.getBubbleData]
   },
 }
 </script>

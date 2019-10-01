@@ -43,9 +43,9 @@ export default {
       this.$emit('onInput', Number(this.val))
     },
   },
-  mounted() {
-    console.log('Slider...mounted')
-  },
+  // mounted() {
+  //   console.log('Slider...mounted')
+  // },
 }
 </script>
 

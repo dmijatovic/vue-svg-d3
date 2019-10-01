@@ -31,7 +31,10 @@ export const highchartsText = {
   title: "Highcharts example 1",
   message: `
     Example of Highcharts chart in Vue component. The component expects
-    configuration object with all options including data.
+    configuration object with all options including data. The approach is
+    similair to ChartJS component. In this case also making window smaller
+    would not resize chart. I believe making chart smaller with flex approach
+    might be a challenge?!?
   `
 };
 

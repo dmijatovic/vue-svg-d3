@@ -42,13 +42,13 @@ export default {
   },
   computed: {
     linkItems() {
-      console.log('linkItems...filter')
+      //console.log('linkItems...filter')
       return this.menuItems.filter(item => item.type === 'link')
     },
   },
   methods: {
     hideMe() {
-      console.log('hideMe...emit...')
+      //console.log('hideMe...emit...')
       this.$emit('hideDrawer', false)
     },
   },

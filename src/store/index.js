@@ -39,17 +39,17 @@ const store = new Vuex.Store({
       return state.chartjs.barChartDemoConfig
     },
     getHighchartsLineDemoConfig(state){
-      console.log("get HC demo...", state.highcharts.hcLineDemoConfig)
+      //console.log("get HC demo...", state.highcharts.hcLineDemoConfig)
       return state.highcharts.hcLineDemoConfig
     }
   },
   mutations:{
     initCircles(state, action){
-      console.log("initCircles...", action)
+      //console.log("initCircles...", action)
       state.home.circles = action.payload
     },
     updateCircleRadius(state, action){
-      console.log("updateCircleRadius...", action)
+      //console.log("updateCircleRadius...", action)
       const {pos,val} = action.payload
       if (state.home.circles[pos]){
         state.home.circles[pos]['r']=val
