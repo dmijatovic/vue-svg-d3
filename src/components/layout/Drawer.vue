@@ -57,9 +57,11 @@ export default {
 
 <style>
 .drawer {
-  flex: 1;
-  /* position: absolute; */
+  /* flex: 1; */
+  position: absolute;
   right: 0;
+  top: 0;
+  bottom: 0;
   padding: 0.5rem 1rem;
   /* width: 20rem; */
   display: flex;

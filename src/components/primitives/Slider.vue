@@ -1,7 +1,7 @@
 <template>
   <div class="slider-input">
     <label for="slider">{{ label }}</label>
-    <input type="range" name="slider" v-model="val" :min="min" :max="max" @change="onChange" />
+    <input type="range" name="slider" v-model="val" :min="min" :max="max" @input="onInput" />
     <div class="slider-display">{{ val }}</div>
   </div>
 </template>
@@ -29,23 +29,22 @@ export default {
   },
   data() {
     return {
-      val: 0,
+      //copy property for internal use
+      val: this.value,
     }
-  },
-  computed: {
-    inputValue() {
-      return this.value
-    },
   },
   methods: {
     onChange() {
       //console.log('onChange...', this.val)
       this.$emit('onChange', Number(this.val))
     },
+    onInput() {
+      //console.log('onInput...', this.val)
+      this.$emit('onInput', Number(this.val))
+    },
   },
   mounted() {
-    //console.log('mounted')
-    this.val = this.value
+    console.log('Slider...mounted')
   },
 }
 </script>

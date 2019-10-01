@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'Bubbles',
+  name: 'Circles',
   props: {
     dataset: {
       type: Array,
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     onClick(i) {
-      console.log('user clicked item...', i)
+      console.log('user clicked circle...', i)
     },
   },
 }

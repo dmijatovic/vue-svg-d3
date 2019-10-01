@@ -42,6 +42,7 @@ export default {
 <style scoped>
 article {
   display: flex;
+  position: relative;
   /* flex-direction: column; */
   width: 100%;
   min-height: 100vh;
@@ -57,6 +58,7 @@ aside {
   /* border: 1px solid red; */
 }
 .main-body {
+  flex: 1;
   padding: 0rem 1rem;
 }
 </style>
