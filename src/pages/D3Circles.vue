@@ -1,15 +1,15 @@
 <template>
   <section>
-    <TextBlock :title="bubbleText.title" :message="bubbleText.message" />
-    <div id="home-bubbles">
-      <SvgCircles :dataset="getCircleData" />
+    <TextBlock :title="page.title" :message="page.message" />
+    <div ref="svgWrapper" class="d3-svg-chart">
+      <D3Circles :dataset="getCircleData" />
     </div>
-    <section class="home-info-section">
-      <div class="home-bubbles-data">
-        <h3>Data passed to SvgBubbles component</h3>
+    <section class="d3-test-panel">
+      <!-- <div class="d3-circles-data">
+        <h3>Data passed to D3Circles component</h3>
         <pre>{{ getCircleData }}</pre>
-      </div>
-      <div class="home-bubbles-control">
+      </div>-->
+      <div class="sliders">
         <h3>Change bubble radius</h3>
         <Slider
           v-for="(item, index) in getInitData"
@@ -26,23 +26,30 @@
 </template>
 
 <script>
-import { homeText } from '@/store/comments'
-import { mapGetters } from 'vuex'
 import TextBlock from '@/components/primitives/TextBlock'
-import SvgCircles from '@/components/shapes/Circles'
+import { d3circlesText } from '@/store/comments'
+import D3Circles from '@/components/charts/D3Circles'
+import getElementSize from '@/utils/getElementSize'
+import { mapGetters } from 'vuex'
 import Slider from '@/components/primitives/Slider'
 export default {
-  name: 'HomePage',
-  data() {
-    //console.log("getting data...", this.$store);
-    return {
-      bubbleText: homeText,
-    }
-  },
+  name: 'D3CirclesPage',
   components: {
     TextBlock,
-    SvgCircles,
+    D3Circles,
     Slider,
+  },
+  data() {
+    return {
+      page: {
+        ...d3circlesText,
+      },
+      svg: {
+        width: 300,
+        height: 300,
+      },
+      dataset: [],
+    }
   },
   computed: {
     ...mapGetters(['getInitData', 'getCircleData']),
@@ -59,8 +66,8 @@ export default {
       })
     },
   },
-
   mounted() {
+    console.log('D3CirclePage...mounted')
     //console.log('Home...mounted')
     if (this.getCircleData.length === 0) {
       //console.log('No circles')
@@ -80,27 +87,15 @@ export default {
 </script>
 
 <style scoped>
-section {
-  flex: 1;
-  padding: 0.5rem 1rem;
-}
-
-#home-bubbles {
+.d3-svg-chart {
   min-height: 400px;
-  border: 1px solid var(--color-light-grey, #efefef);
-  margin-bottom: 1rem;
 }
-
-.home-info-section {
+.d3-test-panel {
   display: flex;
+  width: 100%;
 }
-
-.home-info-section div {
-  padding: 0rem 1rem;
-}
-
-.home-bubbles-control {
+.d3-test-panel div {
   flex: 1;
-  justify-content: flex-end;
+  padding: 1rem;
 }
 </style>

@@ -38,3 +38,18 @@ export const highchartsText = {
   `
 };
 
+export const d3circlesText = {
+  title: "D3 controled svg circles",
+  message: `
+    Example of svg circles controlled by D3. It seems that vue component will not update
+    on property change if vue does not see that this property is used in the html template
+    of the component. The approach seem logical, but in case of D3 circle component,
+    where svg elements are dynamicaly created by D3, it causes the update problem because
+    the props are not defined in the template of the component. To test this comment the
+    div.radius-panel and see if the circle radius will be updated. Quick fix of this problem
+    is to set display:none to template element where one of the props will be used. In
+    that case prop is not visible on the screen but Vue engine will register it and
+    run update cycle on the component each time the value is changed.
+  `
+};
+

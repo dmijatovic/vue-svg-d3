@@ -12,9 +12,9 @@ const store = new Vuex.Store({
   state: {
     home: {
       initData: [
-        { cx: 100, cy: 200, r: 20, fill: "red" },
-        { cx: 230, cy: 200, r: 30, fill: "green" },
-        { cx: 340, cy: 200, r: 40, fill: "blue" }
+        { cx: 100, cy: 200, r: 20, fill: "red" , id:'circle-red' },
+        { cx: 230, cy: 200, r: 30, fill: "green", id:'circle-green' },
+        { cx: 340, cy: 200, r: 40, fill: "blue", id:'circle-blue' }
       ],
       circles:[]
     },
