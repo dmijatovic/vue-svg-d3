@@ -6,6 +6,7 @@ Vue.use(Vuex);
 //pulling static data for chart configs
 import {barChartDemoConfig} from '@/store/charts/chartjs.config.js'
 import {hcLineDemoConfig} from '@/store/charts/hc.config.js'
+import {d3barchart} from '@/store/charts/d3.barchart.config.js'
 
 //create store
 const store = new Vuex.Store({
@@ -23,6 +24,11 @@ const store = new Vuex.Store({
     },
     highcharts:{
       hcLineDemoConfig
+    },
+    d3:{
+      barchart:{
+        ...d3barchart
+      }
     }
   },
   getters: {
@@ -41,6 +47,12 @@ const store = new Vuex.Store({
     getHighchartsLineDemoConfig(state){
       //console.log("get HC demo...", state.highcharts.hcLineDemoConfig)
       return state.highcharts.hcLineDemoConfig
+    },
+    getD3BarChartConfig(state){
+      return state.d3.barchart.config
+    },
+    getD3BarChartDataSet(state){
+      return state.d3.barchart.dataset
     }
   },
   mutations:{

@@ -53,3 +53,9 @@ export const d3circlesText = {
   `
 };
 
+export const d3barchartText = {
+  title: "D3 bar chart",
+  message: `
+    D3 Bar Chart example.
+  `
+};
